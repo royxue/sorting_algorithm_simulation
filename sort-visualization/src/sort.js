@@ -1,3 +1,5 @@
+// Sorting algorithms scripts
+
 function SortStep(type, indexes) {
     this.type = type;
     // Three different modification steps swap, highligh, and insert

@@ -1,3 +1,5 @@
+// Script used to draw data graph
+
 var graph = {};
 
 (function() {
@@ -10,6 +12,7 @@ var graph = {};
     var barColor = '#2196f3';
     var highlightColor = '#ff8f00';
 
+    // Initial graph
     graph.init = function(c) {
         canvas = c;
         ctx = canvas.getContext('2d');
@@ -17,6 +20,7 @@ var graph = {};
         height = canvas.offsetHeight;
     };
 
+    // Draw bars on graph
     graph.draw = function(highlightIndexes, values) {
         ctx.fillStyle = bgColor;
         ctx.fillRect(0, 0, width, height);

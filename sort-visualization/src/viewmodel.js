@@ -1,3 +1,5 @@
+//Viewmodel script, the visualization manager
+
 function ViewModel() {
     this.algorithm = ko.observable('Bubble');
     this.size = ko.observable(50);
