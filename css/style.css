@@ -49,3 +49,7 @@ body {
 .graph {
   text-align: center;
 }
+#intro {
+  font-family: monospace;
+  text-align: center;
+}
