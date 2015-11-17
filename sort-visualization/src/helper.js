@@ -1,6 +1,5 @@
 // Helper script, providing function for other scripts
 
-
 var helper = {
     range: function(min, max) {
         var res = [];

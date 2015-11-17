@@ -6,6 +6,7 @@ function SortStep(type, indexes) {
     this.indexes = indexes;
 }
 
+// Define basic steps in sorting algorithms
 SortStep.SWAP = 'swap';
 SortStep.HIGHLIGHT = 'highlight';
 SortStep.INSERT = 'insert';

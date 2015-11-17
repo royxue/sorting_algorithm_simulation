@@ -6,8 +6,7 @@
   "scripts": {
     "test": "testem"
   },
-  "author": "norahiko",
-  "license": "MIT",
+  "author": "royxue",
   "devDependencies": {
     "chai": "~1.9.0",
     "gulp-concat": "~2.1.7",
