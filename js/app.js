@@ -1,3 +1,5 @@
+// Helper script, providing function for other scripts
+
 var helper = {
     range: function(min, max) {
         var res = [];
@@ -66,6 +68,8 @@ var helper = {
 };
 
 
+// Script used to draw data graph
+
 var graph = {};
 
 (function() {
@@ -75,9 +79,12 @@ var graph = {};
     var height;
 
     var bgColor = '#f5f5f5';
-    var barColor = '#2196f3';
+    var barColor = '#' + Math.floor(Math.random()*16777215).toString(16);
     var highlightColor = '#ff8f00';
 
+    randomColor();
+
+    // Initial graph
     graph.init = function(c) {
         canvas = c;
         ctx = canvas.getContext('2d');
@@ -85,6 +92,7 @@ var graph = {};
         height = canvas.offsetHeight;
     };
 
+    // Draw bars on graph
     graph.draw = function(highlightIndexes, values) {
         ctx.fillStyle = bgColor;
         ctx.fillRect(0, 0, width, height);
@@ -113,12 +121,15 @@ var graph = {};
 })();
 
 
+// Sorting algorithms scripts
+
 function SortStep(type, indexes) {
     this.type = type;
     // Three different modification steps swap, highligh, and insert
     this.indexes = indexes;
 }
 
+// Define basic steps in sorting algorithms
 SortStep.SWAP = 'swap';
 SortStep.HIGHLIGHT = 'highlight';
 SortStep.INSERT = 'insert';
@@ -295,6 +306,8 @@ SortAlgorithm.prototype.swapDown = function(cur, length) {
     }
 };
 
+
+//Viewmodel script, the visualization manager
 
 function ViewModel() {
     this.algorithm = ko.observable('Bubble');
